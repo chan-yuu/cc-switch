@@ -62,7 +62,7 @@ export const APP_ICON_MAP: Record<AppId, AppConfig> = {
     label: "Hermes",
     icon: (
       <ProviderIcon
-        icon="terminal"
+        icon="hermes"
         name="Hermes"
         size={14}
         showFallback={false}

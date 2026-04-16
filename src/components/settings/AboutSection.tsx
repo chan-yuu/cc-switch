@@ -42,7 +42,13 @@ interface ToolVersion {
   wsl_distro: string | null;
 }
 
-const TOOL_NAMES = ["claude", "codex", "gemini", "opencode"] as const;
+const TOOL_NAMES = [
+  "claude",
+  "codex",
+  "gemini",
+  "opencode",
+  "hermes",
+] as const;
 type ToolName = (typeof TOOL_NAMES)[number];
 
 type WslShellPreference = {
@@ -87,7 +93,9 @@ npm i -g @openai/codex@latest
 # Gemini CLI
 npm i -g @google/gemini-cli@latest
 # OpenCode
-curl -fsSL https://opencode.ai/install | bash`;
+curl -fsSL https://opencode.ai/install | bash
+# Hermes
+npm i -g hermes-cli@latest`;
 
 export function AboutSection({ isPortable }: AboutSectionProps) {
   // ... (use hooks as before) ...

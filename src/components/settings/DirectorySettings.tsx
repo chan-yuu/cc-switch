@@ -32,7 +32,7 @@ export function DirectorySettings({
   codexDir,
   geminiDir,
   opencodeDir,
-  hermesDir: _hermesDir,
+  hermesDir,
   onDirectoryChange,
   onBrowseDirectory,
   onResetDirectory,
@@ -131,6 +131,17 @@ export function DirectorySettings({
           onChange={(val) => onDirectoryChange("opencode", val)}
           onBrowse={() => onBrowseDirectory("opencode")}
           onReset={() => onResetDirectory("opencode")}
+        />
+
+        <DirectoryInput
+          label={t("settings.hermesConfigDir")}
+          description={undefined}
+          value={hermesDir}
+          resolvedValue={resolvedDirs.hermes}
+          placeholder={t("settings.browsePlaceholderHermes")}
+          onChange={(val) => onDirectoryChange("hermes", val)}
+          onBrowse={() => onBrowseDirectory("hermes")}
+          onReset={() => onResetDirectory("hermes")}
         />
       </section>
     </div>

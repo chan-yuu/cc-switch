@@ -108,7 +108,7 @@ pub struct ToolVersion {
     wsl_distro: Option<String>,
 }
 
-const VALID_TOOLS: [&str; 4] = ["claude", "codex", "gemini", "opencode"];
+const VALID_TOOLS: [&str; 5] = ["claude", "codex", "gemini", "opencode", "hermes"];
 
 #[derive(Debug, Clone, serde::Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -220,6 +220,7 @@ async fn get_single_tool_version_impl(
         "codex" => fetch_npm_latest_version(&client, "@openai/codex").await,
         "gemini" => fetch_npm_latest_version(&client, "@google/gemini-cli").await,
         "opencode" => fetch_github_latest_version(&client, "anomalyco/opencode").await,
+        "hermes" => fetch_npm_latest_version(&client, "hermes-cli").await,
         _ => None,
     };
 
@@ -380,7 +381,7 @@ fn try_get_version_wsl(
 
     // 防御性断言：tool 只能是预定义的值
     debug_assert!(
-        ["claude", "codex", "gemini", "opencode"].contains(&tool),
+        ["claude", "codex", "gemini", "opencode", "hermes"].contains(&tool),
         "unexpected tool name: {tool}"
     );
 
@@ -695,6 +696,7 @@ fn wsl_distro_for_tool(tool: &str) -> Option<String> {
         "codex" => crate::settings::get_codex_override_dir(),
         "gemini" => crate::settings::get_gemini_override_dir(),
         "opencode" => crate::settings::get_opencode_override_dir(),
+        "hermes" => crate::settings::get_hermes_override_dir(),
         _ => None,
     }?;
 

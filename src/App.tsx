@@ -201,6 +201,7 @@ function App() {
       activeApp !== "codex" &&
       activeApp !== "opencode" &&
       activeApp !== "openclaw" &&
+      activeApp !== "hermes" &&
       activeApp !== "gemini"
     ) {
       setCurrentView("providers");
@@ -263,6 +264,7 @@ function App() {
     activeApp === "codex" ||
     activeApp === "opencode" ||
     activeApp === "openclaw" ||
+    activeApp === "hermes" ||
     activeApp === "gemini";
 
   const {

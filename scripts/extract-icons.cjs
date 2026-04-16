@@ -8,7 +8,7 @@ const ICONS_TO_EXTRACT = {
     'openai', 'anthropic', 'claude', 'google', 'gemini',
     'deepseek', 'kimi', 'moonshot', 'stepfun', 'zhipu', 'minimax',
     'baidu', 'alibaba', 'tencent', 'meta', 'microsoft',
-    'cohere', 'perplexity', 'mistral', 'huggingface'
+    'cohere', 'perplexity', 'mistral', 'huggingface', 'hermes'
   ],
 
   // 云平台
@@ -125,6 +125,7 @@ export const iconMetadata: Record<string, IconMetadata> = {
   perplexity: { name: 'perplexity', displayName: 'Perplexity', category: 'ai-provider', keywords: ['perplexity'], defaultColor: '#20808D' },
   mistral: { name: 'mistral', displayName: 'Mistral', category: 'ai-provider', keywords: ['mistral'], defaultColor: '#FF7000' },
   huggingface: { name: 'huggingface', displayName: 'Hugging Face', category: 'ai-provider', keywords: ['huggingface', 'hf'], defaultColor: '#FFD21E' },
+  hermes: { name: 'hermes', displayName: 'Hermes', category: 'ai-provider', keywords: ['hermes', 'agent'], defaultColor: '#10B981' },
 
   // Cloud Platforms
   aws: { name: 'aws', displayName: 'AWS', category: 'cloud', keywords: ['amazon', 'cloud'], defaultColor: '#FF9900' },
