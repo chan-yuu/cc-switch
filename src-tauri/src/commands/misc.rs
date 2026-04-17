@@ -220,7 +220,7 @@ async fn get_single_tool_version_impl(
         "codex" => fetch_npm_latest_version(&client, "@openai/codex").await,
         "gemini" => fetch_npm_latest_version(&client, "@google/gemini-cli").await,
         "opencode" => fetch_github_latest_version(&client, "anomalyco/opencode").await,
-        "hermes" => fetch_npm_latest_version(&client, "hermes-cli").await,
+        "hermes" => fetch_github_latest_version(&client, "NousResearch/hermes-agent").await,
         _ => None,
     };
 

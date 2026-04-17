@@ -95,7 +95,7 @@ npm i -g @google/gemini-cli@latest
 # OpenCode
 curl -fsSL https://opencode.ai/install | bash
 # Hermes
-npm i -g hermes-cli@latest`;
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash`;
 
 export function AboutSection({ isPortable }: AboutSectionProps) {
   // ... (use hooks as before) ...

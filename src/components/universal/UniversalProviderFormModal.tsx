@@ -521,7 +521,7 @@ requires_openai_auth = true`;
             </div>
             <div className="flex items-center justify-between rounded-lg border p-3">
               <div className="flex items-center gap-2">
-                <ProviderIcon icon="terminal" name="Hermes" size={20} />
+                <ProviderIcon icon="hermes" name="Hermes" size={20} />
                 <span className="font-medium">Hermes</span>
               </div>
               <Switch

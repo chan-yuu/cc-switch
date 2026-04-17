@@ -349,8 +349,15 @@ export const iconMetadata: Record<string, IconMetadata> = {
     name: "zhipu",
     displayName: "Zhipu AI",
     category: "ai-provider",
-    keywords: ["chatglm", "glm"],
-    defaultColor: "#0F62FE",
+    keywords: ["zhipu", "chatglm"],
+    defaultColor: "#000000",
+  },
+  hermes: {
+    name: "hermes",
+    displayName: "Hermes",
+    category: "ai-provider",
+    keywords: ["hermes", "agent"],
+    defaultColor: "#2D6376",
   },
   openrouter: {
     name: "openrouter",
